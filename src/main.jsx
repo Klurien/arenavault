@@ -5,6 +5,12 @@ import './index.css'
 import usePageMeta from './hooks/usePageMeta.js'
 import App from './App.jsx'
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {})
+  })
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
