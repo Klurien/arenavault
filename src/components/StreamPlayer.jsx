@@ -49,7 +49,9 @@ export default function StreamPlayer({ match }) {
         </a>
       </div>
       <p className="player-trust">
-        Streams are provided by independent third-party sources and may carry their own ads.
+        Streams are provided by independent third-party sources and may carry their own
+        ads — this site itself is ad-free. A browser ad blocker (e.g. uBlock Origin)
+        can also hide provider ads inside the player.
       </p>
     </div>
   )
