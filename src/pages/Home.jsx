@@ -48,6 +48,8 @@ export default function Home() {
       {heroMatch ? (
         <section className="hero">
           <div className="hero-bg" style={heroMatch.poster ? { backgroundImage: `url(${heroMatch.poster})`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined} />
+          <div className="glow-orb glow-orb-purple" style={{ width: 500, height: 500, top: -150, right: -100 }} />
+          <div className="glow-orb glow-orb-emerald" style={{ width: 400, height: 400, bottom: -100, left: -50 }} />
           <div className="hero-shade" />
           <div className="hero-content">
             <div className="hero-tag">FEATURED MATCH</div>
