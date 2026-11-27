@@ -37,5 +37,4 @@ self.addEventListener('fetch', (event) => {
     })
   )
 })
-EOF
-echo done
+
