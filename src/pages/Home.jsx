@@ -36,7 +36,8 @@ export default function Home() {
 
   if (error) return <ErrorBox message={error} onRetry={() => window.location.reload()} />
 
-  const live = streams ? liveNow(streams) : []
+  const PRIORITY = { football: 0, basketball: 1, amfootball: 2, hockey: 3, baseball: 4, tennis: 5, fight: 6, race: 7, cricket: 8, volleyball: 9, badminton: 10, rugby: 11, other: 99 }
+  const live = streams ? [...liveNow(streams)].sort((a, b) => (PRIORITY[a.sport] ?? 50) - (PRIORITY[b.sport] ?? 50)) : []
   const up = streams ? upcoming(streams).slice(0, 12) : []
   const heroMatch = live[0] || up[0] || null
   const liveScores = scores.filter((e) => e.status === 'STATUS_IN_PROGRESS' || e.status === 'inprogress').slice(0, 12)
